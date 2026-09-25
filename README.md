@@ -10,6 +10,7 @@ Contometer_GPS/
 ├── pantallas_app.png         Boceto inicial de la aplicación
 ├── GPS_Counter/              Firmware ESP-IDF para el ESP32
 │   ├── README.md             Hardware, lógica, UART0, BLE y compilación
+│   ├── test_ble_4mb/         Simulador BLE para ESP32 clásico sin periféricos
 │   └── main/
 └── app_contometer/           Aplicación móvil Flutter
     ├── README.md             Instalación, pantallas y protocolo BLE
@@ -106,11 +107,14 @@ En la app, conceder permisos Bluetooth, buscar equipos, seleccionar el contómet
 ## Estado actual
 
 - Firmware ESP32 con GPS, NVS, display, buzzer, histéresis, UART0 y BLE: implementado.
+- Firmware de banco para ESP32 clásico de 4 MB sin periféricos: compilado y disponible en `GPS_Counter/test_ble_4mb`.
 - Compilación del firmware con ESP-IDF 5.5.4: completada correctamente.
 - App Flutter con descubrimiento, conexión y configuración BLE real: implementada.
 - `flutter analyze` y `flutter test`: completados correctamente.
 - Prueba física completa teléfono–ESP32: pendiente.
-- APK Android desde el entorno automatizado aislado: no verificable porque su sandbox impide la conexión loopback interna de Java/Gradle. La compilación debe ejecutarse desde una terminal normal de VS Code, PowerShell o Android Studio.
+- APK release de pruebas generado y verificado: `app_contometer/dist/Contometro_GPS-v1.0.0-beta.apk`.
+
+El APK beta está firmado con la clave de depuración para facilitar las pruebas internas. Antes de distribuirlo comercialmente se debe configurar una clave release privada.
 
 ## Seguridad
 

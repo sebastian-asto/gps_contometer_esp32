@@ -162,6 +162,18 @@ Ejemplos habituales de `PUERTO`:
 
 Para salir del monitor serie se utiliza `Ctrl+]`.
 
+### Prueba de la app sin el contómetro físico
+
+La carpeta `test_ble_4mb` contiene un firmware independiente para una placa ESP32-WROOM-32 de 4 MB sin GPS, display ni buzzer. Simula automáticamente los estados normal, precaución y exceso, y utiliza exactamente el mismo protocolo BLE de la aplicación.
+
+El proyecto incluye un binario combinado listo para grabar desde `0x0`:
+
+```text
+test_ble_4mb/dist/contometro_ble_test_4mb_merged.bin
+```
+
+Consultar `test_ble_4mb/README.md` para el ciclo simulado, compilación, grabación y pruebas disponibles.
+
 La configuración actual selecciona un ESP32 clásico con flash de 16 MB y una tabla personalizada con dos particiones OTA de 2400 KB. La funcionalidad de actualización OTA todavía no está implementada en la aplicación.
 
 ## Persistencia del contador

@@ -142,7 +142,9 @@ Estado comprobado durante el desarrollo:
 - Pruebas de widgets: aprobadas.
 - Integración Dart con el protocolo BLE: implementada.
 - Prueba física completa teléfono–ESP32: pendiente después de grabar el firmware en un equipo.
-- Generación del APK desde el entorno automatizado aislado: no verificable porque su sandbox impide la conexión loopback interna de Java/Gradle. La compilación debe ejecutarse desde una terminal normal de VS Code, PowerShell o Android Studio.
+- APK release de pruebas generado y verificado: `dist/Contometro_GPS-v1.0.0-beta.apk`.
+
+El APK beta utiliza la clave de depuración de Android. Puede compartirse para pruebas internas e instalarse directamente, pero antes de publicar en una tienda se debe crear y proteger una clave release propia.
 
 ## Seguridad y despliegue
 
